@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <title>Frontend Mentor | Social proof section</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      :root {
+        /* COLORS */
+
+        --MAGENTA-BOLD: hsl(300, 43%, 22%);
+        --MAGENTA-MD: hsl(303, 10%, 53%);
+        --MAGENTA-LITE: hsl(300, 24%, 96%);
+        --PINK: hsl(333, 80%, 67%);
+        --WHITE: hsl(0, 0%, 100%);
+      }
+
+      body {
+        background-color: var(--WHITE);
+        font-size: 15px;
+        font-family: 'League Spartan', sans-serif;
+        color: var(--MAGENTA-MD);
+        background-image: url('./images/bg-pattern-top-mobile.svg'), url('./images/bg-pattern-bottom-mobile.svg');
+        background-position: top left -100px, bottom right;
+        background-repeat: no-repeat;
+      }
+
+      .container {
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      .hero {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .hero-header {
+        font-size: 2.5rem;
+        color: var(--MAGENTA-BOLD);
+        font-weight: 700;
+        line-height: 2rem;
+      }
+
+      .hero-text {
+        line-height: 1.3rem;
+        font-weight: 500;
+      }
+
+      .ratings {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        align-items: center;
+        margin-bottom: 3rem;
+      }
+
+      .rating {
+        width: 100%;
+        background-color: var(--MAGENTA-LITE);
+        border-radius: 10px;
+        color: var(--MAGENTA-BOLD);
+        text-align: center;
+      }
+
+      .rating-stars {
+        margin: 1rem 0 0.5rem;
+      }
+
+      .rating-review {
+        margin-top: 0;
+        color: var(--MAGENTA-BOLD);
+        font-weight: 700;
+      }
+
+      .testimonials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1rem;
+      }
+
+      .testimonial {
+        background-color: var(--MAGENTA-BOLD);
+        padding: 1.5rem;
+        color: var(--MAGENTA-LITE);
+        border-radius: 10px;
+      }
+
+      .testimonial-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.2rem;
+      }
+
+      .header-img {
+        border-radius: 50%;
+        width:35px;
+        height: 35px;
+      }
+
+      .header-name {
+        margin: 0;
+        font-weight: 500;
+      }
+
+      .badge {
+        margin-bottom: 0;
+        margin-top: 0.3rem;
+        color: var(--PINK);
+        opacity: 0.8;
+      }
+
+      .testimonial-text {
+        margin-bottom: 0;
+        line-height: 1.2rem;
+      }
+
+      .attribution {
+        margin-top: 3rem;
+      }
+
+      @media (min-width: 1440px) {
+
+        body {
+        background-image: url('./images/bg-pattern-top-desktop.svg'), url('./images/bg-pattern-bottom-desktop.svg');
+        background-position: top left, bottom  right;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        overflow: hidden;
+        }
+
+        .container {
+          width: 72%;
+          height: 100%;
+        }
+
+        .header {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        /* HERO DESKTOP */
+
+        .hero {
+          width: 42%;
+          text-align: left;
+        }
+
+        .hero-header {
+          font-size: 3.25rem;
+          line-height: 2.75rem;
+          margin-bottom: 2rem;
+        }
+
+        .hero-text {
+          font-size: 1.1rem;
+        }
+
+
+        /* RATINGS DESKTOP */
+
+        .ratings {
+          width: 45%;
+          justify-content: center;
+        }
+
+        .rating {
+          display: flex;
+          align-items: center;
+          padding: 1.1rem 1.3rem;
+          width: 350px;
+          gap: 2rem;
+        }
+
+        .rating:first-child {
+          align-self: start;
+        }
+
+        .rating:last-child {
+          align-self: end;
+        }
+
+        .rating-review {
+          margin-bottom: 0;
+        }
+
+        .rating-stars {
+          margin: 0;
+        }
+
+        /* TESTIMONIALS DESKTOP */
+
+        .testimonials {
+          flex-direction: row;
+          column-gap: 1.75rem;
+          height: 250px;
+        }
+
+        .testimonial {
+          height: 140px;
+          width:270px;
+          padding: 2rem;
+        }
+
+        .testimonial:first-child {
+          align-self: start;
+        }
+
+        .testimonial:last-child {
+          align-self: end;
+        }
+
+        .attribution {
+          position: fixed;
+          bottom: 0;
+        }
+
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <div class="hero">
+          <h1 class="hero-header">10,000+ of our users love our products.</h1>
+          <p class="hero-text">We only provide great products combined with excellent customer service.
+            See what our satisfied customers are saying about our services.
+          </p>
+        </div>
+
+        <!-- RATINGS -->
+        <div class="ratings">
+          <div class="rating">
+            <div class="rating-stars">
+              <img src="./images/icon-star.svg" alt="star icon" class="img-stars">
+              <img src="./images/icon-star.svg" alt="star icon" class="img-stars">
+              <img src="./images/icon-star.svg" alt="star icon" class="img-stars">
+              <img src="./images/icon-star.svg" alt="star icon" class="img-stars">
+              <img src="./images/icon-star.svg" alt="star icon" class="img-stars">
+            </div>
+            <p class="rating-review">Rated 5 Stars in Reviews</p>
+          </div>
+
+          <div class="rating">
+            <div class="rating-stars">
+              <img src="./images/icon-star.svg" alt="star icon" class="img-stars">
+              <img src="./images/icon-star.svg" alt="star icon" class="img-stars">
+              <img src="./images/icon-star.svg" alt="star icon" class="img-stars">
+              <img src="./images/icon-star.svg" alt="star icon" class="img-stars">
+              <img src="./images/icon-star.svg" alt="star icon" class="img-stars">
+            </div>
+            <p class="rating-review">Rated 5 Stars in Report Guru</p>
+          </div>
+
+          <div class="rating">
+            <div class="rating-stars">
+              <img src="./images/icon-star.svg" alt="star icon" class="img-stars">
+              <img src="./images/icon-star.svg" alt="star icon" class="img-stars">
+              <img src="./images/icon-star.svg" alt="star icon" class="img-stars">
+              <img src="./images/icon-star.svg" alt="star icon" class="img-stars">
+              <img src="./images/icon-star.svg" alt="star icon" class="img-stars">
+            </div>
+            <p class="rating-review">Rated 5 Stars in BestTech</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TESTIMONIALS -->
+      <div class="testimonials">
+        <div class="testimonial">
+          <div class="testimonial-header">
+            <img src="./images/image-colton.jpg" alt="colton" class="header-img">
+            <div class="header-profile">
+                <p class="header-name">Colton Smith</p>
+                <p class="badge">Verified Buyer</p>
+            </div>
+          </div>
+          <p class="testimonial-text">
+            "We needed the same printed design as the one we had ordered a week prior.
+            Not only did they find the original order, but we also received it in time.
+            Excellent!"
+          </p>
+        </div>
+
+        <div class="testimonial">
+          <div class="testimonial-header">
+            <img src="./images/image-irene.jpg" alt="colton" class="header-img">
+            <div class="header-profile">
+                <p class="header-name">Irene Roberts </p>
+                <p class="badge">Verified Buyer</p>
+            </div>
+          </div>
+          <p class="testimonial-text">
+            "Customer service is always excellent and very quick turn around. Completely
+            delighted with the simplicity of the purchase and the speed of delivery."
+          </p>
+        </div>
+
+        <div class="testimonial">
+          <div class="testimonial-header">
+            <img src="./images/image-anne.jpg" alt="colton" class="header-img">
+            <div class="header-profile">
+                <p class="header-name">Anne Wallace </p>
+                <p class="badge">Verified Buyer</p>
+            </div>
+          </div>
+          <p class="testimonial-text">
+            "Put an order with this company and can only praise them for the very high
+            standard. Will definitely use them again and recommend them to everyone!"
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Tabebash</a>.
+    </div>
+  </body>
+</html>
