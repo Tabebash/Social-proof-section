@@ -23,7 +23,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [solution URL](https://github.com/Tabebash/Social-proof-section)
-- Live Site URL: [live site URL](https://your-live-site-url.com)
+- Live Site URL: [live site URL](https://tabebash.github.io/Social-proof-section/)
 
 ### Built with
 
